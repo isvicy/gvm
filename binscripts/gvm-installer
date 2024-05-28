@@ -11,7 +11,7 @@ display_error() {
 update_profile() {
 	[ -f "$1" ] || return 1
 
-	grep -F "$source_line" "$1" > /dev/null 2>&1
+	grep -F "scripts/gvm" "$1" > /dev/null 2>&1
 	if [ $? -ne 0 ]; then
 		echo -e "\n$source_line" >> "$1"
 	fi
